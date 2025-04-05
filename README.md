@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SmartCred - SaaS Solution "Cloud-based low-cost solution" for Credit Management: BI Aspects
+This project involves designing and developing a cloud-based SaaS solution for credit management, specifically targeting decision-makers in small and medium-sized financing companies. The key aspect of this solution is its low cost, making it accessible to smaller financial institutions that may not have the budget for expensive enterprise software.
 
-## Getting Started
+## Key Components of the Project:
+- **Dashboarding & Decision Support System (BI)**
+  - The system will include a front-end (FE) and back-end (BE) designed to provide a comprehensive BI (Business Intelligence) dashboard.
+  - Decision-makers will be able to visualize credit-related data, analyze trends, and generate reports to support strategic decision-making.
+- **Multi-Tenant SaaS Solution**
+  -The software will be built as a Software-as-a-Service (SaaS) solution, meaning multiple clients (financing companies) can use the same platform while keeping their data isolated.
+  -Multi-tenancy allows cost-sharing, scalability, and easy maintenance.
+- **Credit Management Features**
+  - The solution will likely cover key aspects of credit management, such as:
+    - Loan application processing
+    - Credit scoring & risk assessment
+    - Payment tracking & delinquency management
+    - Customer profiling
+    - Reporting & forecasting
+- **Efficiency & Configurability**
+  - The system will be designed to be efficient, ensuring fast data processing and insights.
+  - It will be paramétrable (configurable), meaning clients can customize certain aspects based on their needs.
+ 
+## Links & Configuration requirements:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- https://bun.sh/docs/installation
+```
+powershell -c "irm bun.sh/install.ps1|iex"
+bun --version
+bunx create-next-app@latest smart-cred
+```
+- https://ui.shadcn.com/docs/installation
+```
+bunx shadcn@latest initcreate-next-app@latest smart-cred
+bunx shadcn@latest  init
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
