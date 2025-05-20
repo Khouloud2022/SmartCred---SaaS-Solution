@@ -5,10 +5,10 @@ export const HeaderLogo = () => {
     return (
         <Link href="/" className="items-center  hidden lg:flex ">
             <Image
-                src="/LogoSmartCredBalnc.png"
+                src="LogoSmartCred.svg"
                 alt="Logo"
-                width={200}
-                height={200}
+                width={50}
+                height={50}
             />
             <span className="font-semibold text-white text-2xl ml-2.5">SmartCred</span>
         </Link>
