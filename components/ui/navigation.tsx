@@ -1,6 +1,6 @@
 ﻿"use client";
 import { useState } from "react";
-import { Menu} from "Lucide-react";
+import { Menu} from "lucide-react";
 import { useMedia} from "react-use";
 
 import { usePathname , useRouter } from "next/navigation";
@@ -21,20 +21,20 @@ const routes = [
         label: "Overview",
     },
     {
-        href: "/projects",
-        label: "Projects",
+        href: "/applicants",
+        label: "Applicants",
     },
     {
-        href: "/user_profile",
-        label: "User Profile",
+        href: "/loans",
+        label: "Loans",
     },
     {
-        href: "/account",
-        label: "Account",
+        href: "/accounts",
+        label: "Accounts",
     },
     {
-        href: "/clients",
-        label: "Clients",
+        href: "/payments",
+        label: "Payments",
     },
     {
         href: "/settings",
