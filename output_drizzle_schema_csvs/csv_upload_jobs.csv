@@ -1,0 +1,2 @@
+id,tenantId,uploaderUserId,fileName,uploadTimestamp,status,totalRows,processedRows,errorDetails,createdAt,updatedAt
+3bb879dc-8d8d-4418-8973-476a78580040,f1bc27ea-ffb9-4edf-b483-9ac5d728363e,clerk_user_alpha_manager_seeded,loans_full_schema_seed.csv,2025-05-25T19:44:22.541093,COMPLETED,10000,10000,,2025-05-25T19:44:22.541093,2025-05-25T19:44:22.541093

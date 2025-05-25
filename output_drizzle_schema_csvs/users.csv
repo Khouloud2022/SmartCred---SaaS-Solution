@@ -1,0 +1,3 @@
+id,tenantId,email,firstName,lastName,role,isActive,createdAt,updatedAt
+clerk_user_alpha_manager_seeded,f1bc27ea-ffb9-4edf-b483-9ac5d728363e,manager.alpha@seeded.com,ManagerA,Alpha,manager,True,2025-05-25T19:44:22.541093,2025-05-25T19:44:22.541093
+clerk_user_beta_analyst_seeded,f0f4240a-5ca4-41ee-8f95-011c31c87ad3,analyst.beta@seeded.com,AnalystB,Beta,analyst,True,2025-05-25T19:44:22.541093,2025-05-25T19:44:22.541093
