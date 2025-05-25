@@ -14,14 +14,14 @@ import { DataTable } from "@/components/ui/data-table";
 
 import { columns } from "./columns";
 
-
+ 
 
 
 const AccountsPage = () => {
 
     const newAccount = useNewAccount();
     const accountsQuery = useGetAccounts();
-    const accounts = accountsQuery.data?.data || [];
+    const accounts = accountsQuery.data || [];
 
     return (
         <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-40">
@@ -41,7 +41,7 @@ const AccountsPage = () => {
             </CardHeader>
             <CardContent>
                 <DataTable 
-                    filterKey="email"
+                    filterKey="name"
                     columns={columns} 
                     data={accounts}
       

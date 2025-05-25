@@ -1,6 +1,5 @@
 ﻿"use client";
 
-
 import { InferResponseType } from "hono";
 import { ArrowUpDown } from "lucide-react";
 import { ColumnDef } from "@tanstack/react-table";
@@ -49,10 +48,5 @@ export const columns: ColumnDef<ResponseType>[] = [
       );
     },
   },
-  // Add other columns that actually exist in your data
-  // For example, if you have an "id" field:
-  // {
-  //   accessorKey: "id",
-  //   header: "ID",
-  // },
+  
 ];
