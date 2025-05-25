@@ -6,22 +6,32 @@ import pandas as pd
 import numpy as np
 import logging
 import json
-import re # For string cleaning
-from datetime import datetime # For default application_date
+import re 
+from datetime import datetime
+import sys # For checking execution context
 
 # Corrected imports based on file locations within 'src' package
-from src import config as app_config # config.py is in src/
-from src.api.processing import preprocess_input_for_prediction # processing.py is in src/api/
+import config as app_config # config.py is in src/
+from .processing import preprocess_input_for_prediction # Relative import for sibling module
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+
+
 # --- 1. Load Model Artifacts On Startup ---
 # Paths are now relative to BASE_DIR defined in config.py,
 # and config.py itself knows where its BASE_DIR (src/) is.
+# --- Debugging Paths ---
+print(f"DEBUG: config.py's ARTIFACTS_DIR is: {app_config.ARTIFACTS_DIR}") 
 MODEL_PATH = app_config.ARTIFACTS_DIR / app_config.MODEL_NAME
 SCALER_PATH = app_config.ARTIFACTS_DIR / app_config.SCALER_NAME
 FEATURES_PATH = app_config.ARTIFACTS_DIR / app_config.FEATURES_NAME
+print(f"DEBUG: Attempting to load model from: {MODEL_PATH}")
+print(f"DEBUG: Attempting to load scaler from: {SCALER_PATH}")
+print(f"DEBUG: Attempting to load features from: {FEATURES_PATH}")
+# --- End Debugging Paths ---
+
 
 model = None
 scaler = None

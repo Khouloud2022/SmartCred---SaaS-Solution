@@ -3,9 +3,13 @@
 # Use a lean official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Set environment variables using key=value format
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# === ADD THIS LINE ===
+ENV PYTHONPATH /app 
+# =====================
 
 # Set the working directory in the container
 WORKDIR /app
@@ -18,6 +22,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application source code and artifacts
+# This copies your 'src' folder to '/app/src/'
+# and your 'artifacts' folder to '/app/artifacts/'
 COPY src/ /app/src/
 COPY artifacts/ /app/artifacts/
 
